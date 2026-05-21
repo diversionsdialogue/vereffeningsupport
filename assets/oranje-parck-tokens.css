@@ -1,0 +1,281 @@
+/* ============================================================
+   Oranje Parck Advocatuur — Design Tokens
+   colors_and_type.css
+   v1.0 — concept — 25 April 2026
+   ============================================================ */
+
+/* --- Webfonts --------------------------------------------------
+   Inter and Outfit are self-hosted from /fonts/ as variable fonts.
+   --------------------------------------------------------------- */
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-VariableFont_opsz_wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-Italic-VariableFont_opsz_wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Outfit';
+  src: url('fonts/Outfit-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ============================================================
+     COLOUR — primary ink (dark authority)
+     ============================================================ */
+  --color-ink-900: #0F1115;   /* hero/footer bg, strong headings */
+  --color-ink-800: #1A1D24;   /* dark sections, button hover */
+  --color-ink-700: #2A2E38;   /* body text on light, cards on dark */
+
+  /* ============================================================
+     COLOUR — signature accent (the orange)
+     Use sparingly: max 5–10% of any visible surface.
+     ============================================================ */
+  --color-accent-500: #E1991F; /* primary accent — from the logo */
+  --color-accent-600: #C8841A; /* button hover */
+  --color-accent-100: #FBF1DE; /* very subtle highlight bg */
+
+  /* ============================================================
+     COLOUR — neutral scale (warm, slightly beige)
+     ============================================================ */
+  --color-neutral-50:  #FAFAF8; /* page bg (warm white) */
+  --color-neutral-100: #F2F2EE; /* section bg, cards */
+  --color-neutral-200: #E5E5DF; /* borders, dividers */
+  --color-neutral-400: #9A9A93; /* disabled text, placeholders */
+  --color-neutral-600: #5A5A55; /* secondary body */
+  --color-neutral-800: #2A2A28; /* alt body text */
+
+  /* ============================================================
+     COLOUR — functional / state
+     ============================================================ */
+  --color-success: #2F7D5A;   /* confirmations, "afgerond" */
+  --color-warning: #B8782A;   /* attention (distinct from accent) */
+  --color-error:   #A03030;   /* errors, deadline warnings */
+  --color-info:    #3A5C7A;   /* info boxes, tooltips */
+
+  /* ============================================================
+     SEMANTIC COLOUR — what the rest of the system should reach for
+     ============================================================ */
+  --bg-page:        var(--color-neutral-50);
+  --bg-section:     var(--color-neutral-100);
+  --bg-card:        #FFFFFF;
+  --bg-dark:        var(--color-ink-900);
+  --bg-dark-alt:    var(--color-ink-800);
+  --bg-highlight:   var(--color-accent-100);
+
+  --fg-strong:      var(--color-ink-900);
+  --fg-default:     var(--color-ink-700);
+  --fg-muted:       var(--color-neutral-600);
+  --fg-disabled:    var(--color-neutral-400);
+  --fg-on-dark:     var(--color-neutral-50);
+  --fg-accent:      var(--color-accent-500);
+
+  --border-subtle:  var(--color-neutral-200);
+  --border-strong:  var(--color-ink-900);
+
+  /* ============================================================
+     TYPOGRAPHY — families
+     ============================================================ */
+  --font-family-display: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-family-body:    'Inter', system-ui, -apple-system, sans-serif;
+
+  /* ============================================================
+     TYPOGRAPHY — type scale (modular 1.250 — major third)
+     [size / line-height / weight]
+     ============================================================ */
+  --font-display:    4.000rem;  /* 64px */
+  --font-display-lh: 1.10;
+  --font-display-w:  300;
+
+  --font-h1:    3.052rem;       /* 49px */
+  --font-h1-lh: 1.15;
+  --font-h1-w:  300;
+
+  --font-h2:    2.441rem;       /* 39px */
+  --font-h2-lh: 1.20;
+  --font-h2-w:  400;
+
+  --font-h3:    1.953rem;       /* 31px */
+  --font-h3-lh: 1.25;
+  --font-h3-w:  500;
+
+  --font-h4:    1.563rem;       /* 25px */
+  --font-h4-lh: 1.30;
+  --font-h4-w:  500;
+
+  --font-h5:    1.250rem;       /* 20px */
+  --font-h5-lh: 1.40;
+  --font-h5-w:  600;
+
+  --font-body-lg:    1.125rem;  /* 18px */
+  --font-body-lg-lh: 1.60;
+
+  --font-body:    1.000rem;     /* 16px */
+  --font-body-lh: 1.65;
+
+  --font-body-sm:    0.875rem;  /* 14px */
+  --font-body-sm-lh: 1.55;
+
+  --font-eyebrow:    0.75rem;   /* 12px */
+  --font-eyebrow-lh: 1.40;
+  --font-eyebrow-w:  600;
+  --font-eyebrow-tracking: 0.08em;
+
+  /* ============================================================
+     SPACING — 8px base
+     ============================================================ */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-8:  48px;
+  --space-10: 64px;
+  --space-12: 96px;
+  --space-16: 128px;
+
+  /* ============================================================
+     LAYOUT
+     ============================================================ */
+  --container-max:   1240px;
+  --container-read:  720px;
+  --gutter-desktop:  32px;
+  --gutter-mobile:   16px;
+
+  /* ============================================================
+     RADII — near-square, intentional
+     ============================================================ */
+  --radius-button: 2px;
+  --radius-card:   4px;
+  --radius-input:  2px;
+
+  /* ============================================================
+     MOTION
+     ============================================================ */
+  --motion-fast:  150ms;
+  --motion-base:  200ms;
+  --motion-page:  280ms;
+  --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ============================================================
+   SEMANTIC TYPE STYLES
+   Apply these classes (or replicate the rule on bare elements).
+   ============================================================ */
+
+html, body {
+  font-family: var(--font-family-body);
+  font-size: var(--font-body);
+  line-height: var(--font-body-lh);
+  color: var(--fg-default);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+}
+
+.display, h1.display {
+  font-family: var(--font-family-display);
+  font-size: var(--font-display);
+  line-height: var(--font-display-lh);
+  font-weight: var(--font-display-w);
+  letter-spacing: -0.015em;
+  color: var(--fg-strong);
+}
+
+h1, .h1 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-h1);
+  line-height: var(--font-h1-lh);
+  font-weight: var(--font-h1-w);
+  letter-spacing: -0.01em;
+  color: var(--fg-strong);
+}
+
+h2, .h2 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-h2);
+  line-height: var(--font-h2-lh);
+  font-weight: var(--font-h2-w);
+  color: var(--fg-strong);
+}
+
+h3, .h3 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-h3);
+  line-height: var(--font-h3-lh);
+  font-weight: var(--font-h3-w);
+  color: var(--fg-strong);
+}
+
+h4, .h4 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-h4);
+  line-height: var(--font-h4-lh);
+  font-weight: var(--font-h4-w);
+  color: var(--fg-strong);
+}
+
+h5, .h5 {
+  font-family: var(--font-family-body);
+  font-size: var(--font-h5);
+  line-height: var(--font-h5-lh);
+  font-weight: var(--font-h5-w);
+  color: var(--fg-strong);
+}
+
+.lead, p.lead {
+  font-size: var(--font-body-lg);
+  line-height: var(--font-body-lg-lh);
+  color: var(--fg-default);
+}
+
+p, .body {
+  font-size: var(--font-body);
+  line-height: var(--font-body-lh);
+  color: var(--fg-default);
+  max-width: 65ch;
+}
+
+small, .body-sm {
+  font-size: var(--font-body-sm);
+  line-height: var(--font-body-sm-lh);
+  color: var(--fg-muted);
+}
+
+.eyebrow {
+  font-family: var(--font-family-body);
+  font-size: var(--font-eyebrow);
+  line-height: var(--font-eyebrow-lh);
+  font-weight: var(--font-eyebrow-w);
+  letter-spacing: var(--font-eyebrow-tracking);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+/* No italics for emphasis — use weight 600 */
+em, .emphasis {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--fg-strong);
+}
+
+a {
+  color: inherit;
+  text-decoration-color: var(--color-neutral-400);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color var(--motion-fast) var(--ease-out);
+}
+a:hover {
+  text-decoration-color: var(--color-ink-900);
+}
